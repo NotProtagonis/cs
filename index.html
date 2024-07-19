@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-Mutasi Siswa</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container mt-5">
+    <h1 class="text-center mb-5">E-Mutasi Siswa</h1>
+
+    <nav class="nav nav-pills nav-justified mb-4">
+      <a class="nav-link active" id="linkMutasiMasuk" href="#" onclick="showForm('formMutasiMasuk')">Mutasi Masuk</a>
+      <a class="nav-link" id="linkMutasiKeluar" href="#" onclick="showForm('formMutasiKeluar')">Mutasi Keluar</a>
+    </nav>
+
+    <form id="formMutasiMasuk" data-sheet="MutasiMasuk">
+      <h2 class="text-center">Mutasi Masuk</h2>
+      <div class="form-group">
+        <label for="nama_masuk">Nama:</label>
+        <input type="text" class="form-control" id="nama_masuk" name="nama" required>
+      </div>
+      <div class="form-group">
+        <label for="asal_sekolah_masuk">Asal Sekolah:</label>
+        <input type="text" class="form-control" id="asal_sekolah_masuk" name="asal_sekolah" required>
+      </div>
+      <div class="form-group">
+        <label for="kelas_masuk">Diterima di Kelas:</label>
+        <select class="form-control" id="kelas_masuk" name="kelas" required>
+          <option value="I">I</option>
+          <option value="II">II</option>
+          <option value="III">III</option>
+          <option value="IV">IV</option>
+          <option value="V">V</option>
+          <option value="VI">VI</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">Submit</button>
+    </form>
+
+    <form id="formMutasiKeluar" data-sheet="MutasiKeluar" style="display:none;">
+      <h2 class="text-center">Mutasi Keluar</h2>
+      <div class="form-group">
+        <label for="nama_keluar">Nama:</label>
+        <input type="text" class="form-control" id="nama_keluar" name="nama" required>
+      </div>
+      <div class="form-group">
+        <label for="kelas_keluar">Kelas:</label>
+        <select class="form-control" id="kelas_keluar" name="kelas" required>
+          <option value="I">I</option>
+          <option value="II">II</option>
+          <option value="III">III</option>
+          <option value="IV">IV</option>
+          <option value="V">V</option>
+          <option value="VI">VI</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="alamat_sekolah_tujuan">Alamat Sekolah Tujuan:</label>
+        <input type="text" class="form-control" id="alamat_sekolah_tujuan" name="alamat_sekolah_tujuan" required>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">Submit</button>
+    </form>
+
+    <div id="loadingSpinner" class="spinner-border text-primary" role="status" style="display:none;">
+      <span class="sr-only">Loading...</span>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="scripts.js"></script>
+</body>
+</html>
